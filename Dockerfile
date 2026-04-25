@@ -13,4 +13,4 @@ RUN chmod +x /start.sh
 EXPOSE 8000
 
 # Executa o script ao ligar o container
-CMD ["/start.sh"]
+ENTRYPOINT ["/start.sh"]
