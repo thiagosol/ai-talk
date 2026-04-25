@@ -1,0 +1,21 @@
+name: ai-talk
+port: 8000
+healthPath: /health
+
+registry: registry-ai.tmsol.app
+
+resources:
+  requests:
+    memory: "1Gi"
+    cpu: "500m"
+  limits:
+    memory: "15Gi"
+    cpu: "3500m"
+
+secrets_env:
+  API_SECRET_KEY: AI_TALK_KEY
+
+volumes:
+  - name: ollama-models-disk
+    mountPath: /root/.ollama
+    type: persistent
