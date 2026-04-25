@@ -12,5 +12,9 @@ RUN chmod +x /start.sh
 # Vamos expor a porta 8000, que é a do Nginx (Segura)
 EXPOSE 8000
 
-# Executa o script ao ligar o container
-ENTRYPOINT ["/start.sh"]
+# --- A MÁGICA ACONTECE AQUI ---
+# Limpa o entrypoint da imagem original do Ollama
+ENTRYPOINT []
+
+# Agora sim, executa o nosso script como o processo principal do container
+CMD ["/start.sh"]
