@@ -12,6 +12,9 @@ resources:
     memory: "15Gi"
     cpu: "3500m"
 
+env:
+  OLLAMA_KEEP_ALIVE: "-1"
+
 secrets_env:
   API_SECRET_KEY: AI_TALK_KEY
 
