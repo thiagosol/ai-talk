@@ -15,7 +15,7 @@ server {
         default_type application/json;
         set \$auth_valid 0;
         
-        if (\$http_authorization = "Bearer ${API_TOKEN}") {
+        if (\$http_authorization = "Bearer ${API_SECRET_KEY}") {
             set \$auth_valid 1;
         }
 
